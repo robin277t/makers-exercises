@@ -1,0 +1,12 @@
+<html>
+  <head></head>
+  <title><%=@username%>'s peeps page</title>
+  <body>
+    <h2>Have a look at <%=@username%>'s peeps</h2>
+    <%@peeps.each do |peep| %>
+    <div>
+      <p> <%=peep.content%> --- <%=@username%> --- peeped at <%=peep.time%></p>
+    </div>
+    <%end%>
+  </body>
+</html>

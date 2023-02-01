@@ -1,0 +1,31 @@
+<html>
+  <head><%=@username%> is logged in</head>
+  <title><%=@username%>'s Chitter page</title>
+  
+  <body>
+    <form action="/" method="POST">
+        <p>What would you like to peep? -- </p>
+        <p><input type="text" name="content"></p>
+        <p><input type="submit" value="submit the peep"></p>
+        <%# THIS ISN'T WORKING FOR SOME REASON %>
+    </form>
+  </body>
+
+  
+
+  <body>
+    <form action="/logout" method="POST">
+        <p><input type="submit" value="logout of chitter"></p>
+    </form>
+  </body>
+  
+  <body>
+    <h1>Chitter</h1>
+    <h2>Check out the latest peeps <%=@username%></h2>
+    <%@peeps.each do |peep| %>
+    <div>
+      <p> <%=peep.content%> --- <%=peep.username%> --- peeped at <%=peep.time%></p>
+    </div>
+    <%end%>
+  </body>
+</html>

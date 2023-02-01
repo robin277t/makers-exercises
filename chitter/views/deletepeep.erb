@@ -1,0 +1,12 @@
+<html>
+  <head><%=@username%> is logged in</head>
+  <title><%=@username%>'s peep delete page</title>
+  <body>
+    <h2>Which peep would you like to delete?</h2>
+    <%@peeps.each do |peep| %>
+    <div>
+      <p> <%=peep.content%> --- <%=peep.username%> --- peeped at <%=peep.time%></p>
+    </div>
+    <%end%>
+  </body>
+</html>
